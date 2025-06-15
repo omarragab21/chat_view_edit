@@ -20,7 +20,7 @@ dependencies:
   cached_network_image: ^3.4.1
   chatview_utils:
     git:
-      url: https://github.dev/omarragab21/chatview_utils-0.0.1_edit
+      url: https://github.com/omarragab21/chatview_utils-0.0.1_edit
       ref: main
       
   emoji_picker_flutter: ^4.3.0
