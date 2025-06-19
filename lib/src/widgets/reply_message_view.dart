@@ -90,7 +90,16 @@ class ReplyMessageView extends StatelessWidget {
       ),
       MessageType.custom when customMessageReplyViewBuilder != null =>
         customMessageReplyViewBuilder!(message),
-      MessageType.custom || MessageType.text => Text(
+      MessageType.custom => Text(
+        message.message.split("/").last,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+        style: TextStyle(
+          fontSize: 12,
+          color: sendMessageConfig?.replyMessageColor ?? Colors.black,
+        ),
+      ),
+      MessageType.text => Text(
         message.message,
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
